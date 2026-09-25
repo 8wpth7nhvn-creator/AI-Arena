@@ -1,0 +1,18 @@
+{
+  "name": "ai-arena",
+  "version": "1.0.0",
+  "description": "AI Arena \u2014 Learn by Fighting. An educational debate game where you beat the AI by understanding the answer.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.128.0"
+  }
+}
