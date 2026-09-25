@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node server/index.js",
-    "test": "node --test test/",
+    "test": "node --test \"test/*.test.js\"",
     "build:pages": "node scripts/build-pages.mjs"
   },
   "engines": {
