@@ -1,0 +1,237 @@
+// History challenges focus on causation and evidence, not dates.
+// `requireEvidence` makes every opponent ask the student to back up the
+// causal claim before conceding.
+
+export default [
+  {
+    id: 'hist-rome',
+    subject: 'history',
+    topic: 'Fall of the Western Roman Empire',
+    difficulty: 2,
+    objective: 'The student can explain that the fall of the Western Roman Empire had multiple long-term causes, supported by evidence.',
+    claim: 'The Western Roman Empire fell because of one single barbarian invasion in 476 CE.',
+    scaffold: 'Could a strong, stable empire be toppled by one event? What might have weakened it first?',
+    requireEvidence: true,
+    concepts: [
+      {
+        id: 'multiple_causes',
+        label: 'Multiple long-term causes',
+        description: 'The fall was a gradual process with several interacting causes over centuries.',
+        patterns: [/multiple|many|several|combination|range of|variety of|more than one|number of/, /gradual|over (time|centuries|decades|years)|long.?term|slow|decline/],
+        followUp: 'Was the empire strong and healthy right up until 476? What was happening in the centuries before?',
+      },
+      {
+        id: 'specific_factor',
+        label: 'A specific causal factor',
+        description: 'E.g. economic trouble (debased coinage, heavy taxes, trade decline), political instability (civil wars, rapid turnover of emperors), or military strain (reliance on mercenaries, pressure on borders).',
+        patterns: [/econom|inflation|tax|debt|trade|currency|coin/, /politic|civil war|emperors?|corrupt|instabil|assassinat|split|division|leadership/, /army|mercenar|military|soldiers|border|frontier|goths?|huns?|germanic/, /plague|disease|pandemic/],
+        followUp: 'Name one concrete force that was weakening Rome, and explain how it made the empire vulnerable.',
+      },
+    ],
+    clue: 'multiple_causes',
+    misconceptions: [
+      {
+        id: 'single_event',
+        label: 'Treating a complex process as one event',
+        patterns: [/(single|one) (event|invasion|battle|cause|attack)/, /just (the )?barbarians/, /only because/],
+        correction: '476 marks when the last Western emperor was deposed, but historians see it as the end of a long decline, not its cause.',
+        socratic: 'Why could an invasion in 476 succeed when Rome had repelled invaders for centuries? What had changed?',
+      },
+    ],
+    counter: {
+      text: 'But 476 is the date in every textbook. Odoacer deposed the last emperor. That\'s clearly THE cause.',
+      defense: {
+        label: 'An endpoint, not a cause',
+        description: '476 is a symbolic endpoint. Odoacer could depose Romulus Augustulus only because the Western empire was already weak. Also, the Eastern Roman Empire continued for nearly 1,000 more years.',
+        patterns: [/symbol|end ?point|marker|convention/, /(already|had been|was) (weak|declin|collaps|fragile)/, /(result|consequence|symptom|outcome)/, /not (the )?cause/, /east(ern)?|byzant|constantinople/, /continued/, /debate|historians/],
+      },
+      followUp: 'Is the date something ended the same as the reason it ended? Did the whole Roman Empire end in 476?',
+    },
+    evidenceExamples: ['Silver content of the denarius fell from ~90% to under 5% by the 270s; the 3rd century saw ~26 emperors in 50 years.'],
+    acceptableReasoning: 'Gradual decline; interacting economic, political, military causes; 476 is an endpoint/symbol; evidence such as coin debasement, civil wars, reliance on federated troops.',
+    hints: [
+      'Ask why that invasion succeeded when earlier ones had not.',
+      'Think about Rome\'s money, its leaders, and its armies in the centuries before 476.',
+      'Historians describe the fall as a long process with several causes.',
+      'Economic decline (debased coins, taxes), political chaos (many short-lived emperors, civil wars) and military strain (reliance on mercenaries) weakened Rome long before 476.',
+    ],
+    solution: {
+      summary: 'Great events usually have multiple long-term causes; the final event is often a trigger or symbol.',
+      explanation: 'The Western Empire declined over centuries through economic crisis (debased coinage, heavy taxation), political instability (civil wars, rapid turnover of emperors) and military strain. Its deposition in 476 was a symbolic endpoint, and the Eastern Empire survived until 1453.',
+    },
+    keywords: ['rome', 'roman', 'empire', 'fell', 'fall', 'barbarian', 'invasion', '476'],
+  },
+  {
+    id: 'hist-printing-press',
+    subject: 'history',
+    topic: 'The printing press',
+    difficulty: 3,
+    objective: 'The student can explain how the printing press changed society by transforming the spread of ideas, using specific consequences.',
+    claim: 'The printing press was just a faster way to copy books. It didn\'t really change society.',
+    scaffold: 'What happens to ideas when copying them becomes hundreds of times cheaper?',
+    requireEvidence: true,
+    concepts: [
+      {
+        id: 'spread_ideas',
+        label: 'Ideas spread faster and wider',
+        description: 'Cheap, fast printing made texts affordable and widely available, spreading ideas across Europe rapidly.',
+        patterns: [/spread|circulat|distribut|reach(ed)?/, /cheaper|affordable|cost less|accessible|access/, /more people|mass|wide(ly|r)/, /faster (spread|communication)/],
+        followUp: 'What happens when books become much cheaper and more plentiful?',
+      },
+      {
+        id: 'consequences',
+        label: 'Specific social consequences',
+        description: 'E.g. the Protestant Reformation (Luther\'s pamphlets), rising literacy, the Scientific Revolution, standardized languages.',
+        patterns: [/reformation|luther|protestant/, /literacy|learn(ed)? to read|education/, /scien(ce|tific)/, /standardi[sz]|vernacular|language/, /pamphlets?|newspapers?/, /church|authority|power/, /revolution|renaissance/],
+        followUp: 'Can you name one major historical change that the press made possible?',
+      },
+    ],
+    clue: 'spread_ideas',
+    misconceptions: [
+      {
+        id: 'tech_neutral',
+        label: 'Thinking a communication technology changes only speed',
+        patterns: [/(only|just) (made it )?(faster|quicker|speed)/, /same (books|thing) (just )?(faster|more)/],
+        correction: 'Speed and cost changes can transform *who* has access to ideas, which changes power structures.',
+        socratic: 'Did the internet only make letters faster, or did it change who can publish and what people can learn?',
+      },
+    ],
+    counter: {
+      text: 'Most people in 1500 couldn\'t read. So books couldn\'t have changed society much.',
+      defense: {
+        label: 'Ideas reached non-readers too',
+        description: 'Printed texts were read aloud in public, pamphlets used woodcut images, literacy rose over time, and ideas spread through the educated elites who shaped society.',
+        patterns: [/read (aloud|out)|aloud|out loud/, /image|woodcut|picture|illustrat|cartoon/, /literacy (rose|increase|grew|spread)|more people learned/, /over time|gradually/, /elite|clergy|scholar|priest|preach|sermon|nobles/, /(word of mouth|talk|discuss)/],
+      },
+      followUp: 'Do you need to read to be influenced by what\'s printed? How might ideas reach people who can\'t read?',
+    },
+    evidenceExamples: ['Luther\'s works made up about a third of all German-language books sold 1518–1525; an estimated 20 million books were printed in Europe by 1500.'],
+    acceptableReasoning: 'Cheap printing spread ideas widely; enabled Reformation, scientific exchange, rising literacy; ideas reached illiterate people via reading aloud and images.',
+    hints: [
+      'Think about who could own books before and after printing.',
+      'What happens to an idea if thousands of copies exist within weeks?',
+      'A famous religious movement in the 1500s relied heavily on printed pamphlets.',
+      'The press made texts cheap and plentiful, spreading ideas quickly. It fuelled the Protestant Reformation, rising literacy and scientific exchange.',
+    ],
+    solution: {
+      summary: 'Changes in communication technology change who has access to ideas, and therefore society.',
+      explanation: 'Printing made texts cheap and fast to reproduce, so ideas spread widely. Luther\'s pamphlets fuelled the Reformation, scientists shared findings, and literacy grew. Ideas reached non-readers through public reading and images.',
+    },
+    keywords: ['printing', 'press', 'books', 'society', 'copy', 'change', 'faster'],
+  },
+  {
+    id: 'hist-ww1',
+    subject: 'history',
+    topic: 'Causes of World War I',
+    difficulty: 4,
+    objective: 'The student can distinguish long-term causes from the immediate trigger of World War I, with supporting evidence.',
+    claim: 'World War I happened simply because Archduke Franz Ferdinand was assassinated.',
+    scaffold: 'Why would one assassination drag in Britain, France, Russia, and Germany?',
+    requireEvidence: true,
+    concepts: [
+      {
+        id: 'long_term',
+        label: 'Long-term causes',
+        description: 'Alliance systems, militarism/arms race, imperial rivalry and nationalism built tension for decades.',
+        patterns: [/alliance|entente|treat(y|ies)/, /militari|arms race|naval race|build.?up/, /imperiali|empire|colon/, /nationali/, /rival|tension/],
+        followUp: 'Why did a murder in Sarajevo pull in countries far away? What connected them?',
+      },
+      {
+        id: 'trigger_vs_cause',
+        label: 'Trigger vs underlying cause',
+        description: 'The assassination was the immediate trigger (spark); the underlying causes made war likely.',
+        patterns: [/trigger|spark|catalyst|immediate|short.?term|final straw|last straw/, /underlying|root|long.?term|deeper/],
+        followUp: 'Is there a difference between what sets something off and why it was ready to go off?',
+      },
+    ],
+    clue: 'trigger_vs_cause',
+    misconceptions: [
+      {
+        id: 'single_cause',
+        label: 'Treating the trigger as the only cause',
+        patterns: [/only (cause|reason)/, /single cause/, /(just|simply) (because|the) assassination/],
+        correction: 'The assassination was the spark, but it only led to a world war because of pre-existing alliances and rivalries.',
+        socratic: 'Leaders had been assassinated before without causing world wars. What was different in 1914?',
+      },
+    ],
+    counter: {
+      text: 'But without the assassination, there would have been no war in 1914. So it IS the cause.',
+      defense: {
+        label: 'Necessary spark vs sufficient cause',
+        description: 'The assassination may have been necessary for war in *that* month, but the tensions made a major war likely; earlier crises (Moroccan crises, Balkan Wars) nearly triggered it. Counterfactuals are uncertain.',
+        patterns: [/(another|other|different|some other) (spark|trigger|crisis|incident|event)/, /moroc|balkan/, /sufficient|necessary/, /would have (happened|found|started)|eventually|sooner or later/, /counterfactual|can'?t know|uncertain/, /powder ?keg/, /(timing|when)/],
+      },
+      followUp: 'Had there been earlier crises that nearly caused a war? What does that suggest?',
+    },
+    evidenceExamples: ['The Anglo-German naval race (Dreadnoughts from 1906); the Moroccan crises of 1905 and 1911; the Balkan Wars of 1912–13.'],
+    acceptableReasoning: 'Assassination = trigger; alliances, militarism, imperialism, nationalism = underlying causes; earlier crises show the system was primed for war.',
+    hints: [
+      'A spark only causes an explosion if there is something flammable nearby.',
+      'Why did Austria-Hungary\'s quarrel with Serbia pull in other powers?',
+      'Historians distinguish between triggers and long-term causes.',
+      'The assassination was the trigger. Alliance systems, militarism (arms race), imperial rivalry and nationalism were the long-term causes that turned a local crisis into a world war.',
+    ],
+    solution: {
+      summary: 'Major events have both triggers and underlying causes; the trigger alone does not explain the scale.',
+      explanation: 'The assassination triggered a crisis, but alliances, militarism, imperial rivalries and nationalism turned it into a world war. Earlier crises (Morocco 1905/1911, the Balkan Wars) show Europe was already a "powder keg".',
+    },
+    keywords: ['war', 'ww1', 'world', 'assassination', 'archduke', 'ferdinand', 'cause', '1914'],
+  },
+  {
+    id: 'hist-source-bias',
+    subject: 'history',
+    topic: 'Evaluating sources',
+    difficulty: 5,
+    objective: 'The student can evaluate a primary source\'s reliability by considering its author, purpose and corroboration.',
+    claim: 'A 1920s newspaper editorial says factory workers were happy and well paid. That\'s reliable evidence of how workers actually lived.',
+    scaffold: 'Who wrote it, why, and for whom?',
+    concepts: [
+      {
+        id: 'author_purpose',
+        label: 'Author, purpose and bias',
+        description: 'Consider who owned the paper, the editorial\'s purpose (persuasion), its audience and possible bias (e.g. owners with business interests).',
+        patterns: [/bias/, /owner|owned|advertis|sponsor/, /perspective|point of view|agenda|purpose|motive|persuad|propaganda/, /who (wrote|published)|author|editor/, /audience/, /opinion/],
+        followUp: 'Who might have written or owned this newspaper, and what might they want readers to believe?',
+      },
+      {
+        id: 'corroboration',
+        label: 'Corroborate with other sources',
+        description: 'Check against other evidence: wage records, workers\' diaries and letters, strike records, government statistics.',
+        patterns: [/other sources|another source|multiple sources/, /compare|cross.?check|corroborat|triangulat|verify/, /wage (records|data)|statistics|census|records/, /diar(y|ies)|letters|interviews|testimon/, /strikes?|unions?/],
+        followUp: 'What other sources could you check to see if the editorial is accurate?',
+      },
+    ],
+    clue: 'author_purpose',
+    misconceptions: [
+      {
+        id: 'primary_equals_true',
+        label: 'Thinking a primary source is automatically reliable',
+        patterns: [/primary sources? (is|are) (always )?(reliable|true|accurate)/, /(from|written in) the (time|1920s) so (it'?s )?(true|reliable)/],
+        correction: 'Being from the time makes a source primary, not automatically accurate. Every source has an author with a perspective.',
+        socratic: 'Is every newspaper article written today a perfectly accurate account of reality? Why would 1920s papers be different?',
+      },
+    ],
+    counter: {
+      text: 'So you\'re saying newspaper sources are useless for historians?',
+      defense: {
+        label: 'Biased sources are still useful evidence',
+        description: 'A biased source is still valuable: it reveals the attitudes, arguments and interests of its authors and audience. Its usefulness depends on the question being asked.',
+        patterns: [/(still )?useful|valuable/, /tells? us (about|what|how)|reveals?|shows? (us )?(what|how)/, /attitude|opinion|belief|perspective of|views? of/, /depends (on )?(the |what )?question/, /not useless/, /what (the )?(owners|editors|elite|employers) (thought|wanted)/],
+      },
+      followUp: 'What CAN this editorial tell us, even if it\'s biased?',
+    },
+    evidenceExamples: ['Records of the 1919 steel strike and workers\' letters describe 12-hour shifts, contradicting positive editorials.'],
+    acceptableReasoning: 'Consider provenance, purpose, audience, bias; corroborate with wage data, diaries, strike records; biased sources still reveal attitudes.',
+    hints: [
+      'Every source was created by someone, for a reason.',
+      'Who owned newspapers, and who paid for their advertising?',
+      'Historians compare a source with others before trusting it.',
+      'Consider the editorial\'s author, purpose and possible bias, and corroborate it with wage records, workers\' diaries or strike records.',
+    ],
+    solution: {
+      summary: 'Evaluate sources by author, purpose and audience, and corroborate them; bias makes a source informative, not useless.',
+      explanation: 'An editorial is written to persuade, often reflecting owners\' interests. Historians corroborate with wage data, diaries and strike records. Even a biased source is useful evidence of what some people believed or wanted others to believe.',
+    },
+    keywords: ['newspaper', 'editorial', 'workers', 'reliable', 'evidence', 'source', 'happy', '1920s'],
+  },
+];
