@@ -10,7 +10,7 @@ An educational game where an AI opponent makes a confident claim and you have to
 
 ## Play online
 
-**▶ https://GITHUB_USER.github.io/AI-Arena/**
+**▶ https://8wpth7nhvn-creator.github.io/AI-Arena/**
 
 No download or account needed. The online version runs entirely in your browser with the demo opponent, and progress is saved on your device. It is rebuilt and redeployed automatically on every push to `main` (`.github/workflows/pages.yml`).
 
